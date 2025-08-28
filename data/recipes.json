@@ -1,4 +1,3 @@
-
 [
   {
     "id": "550e8400-e29b-41d4-a716-446655440000",
@@ -124,5 +123,92 @@
     "difficulty": "easy",
     "rating": 4.7,
     "createdAt": "2025-01-01T09:20:00.000Z"
+  },
+  {
+    "id": "f3a0566a-45c2-4cb3-b23c-7134a8b0d757",
+    "title": "Chocolate Cake",
+    "description": "A rich and decadent chocolate cake perfect for any occasion.",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 cup sugar",
+      "1/2 cup cocoa powder",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "1 cup buttermilk",
+      "1/2 cup vegetable oil",
+      "2 eggs",
+      "1 tsp vanilla extract"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C). Grease and flour a 9-inch round pan.",
+      "In a large bowl, whisk together flour, sugar, cocoa powder, baking soda, and salt.",
+      "In a separate bowl, whisk together buttermilk, oil, eggs, and vanilla.",
+      "Add wet ingredients to dry ingredients and mix until just combined. Do not overmix.",
+      "Pour batter into the prepared pan and bake for 30-35 minutes, or until a toothpick inserted into the center comes out clean.",
+      "Let cool in the pan for 10 minutes before transferring to a wire rack to cool completely."
+    ],
+    "cookingTime": 45,
+    "servings": 8,
+    "difficulty": "medium",
+    "rating": 0,
+    "createdAt": "2025-08-28T14:29:25.099Z"
+  },
+  {
+    "id": "7c848e39-7e44-489e-a2b8-c50323581f51",
+    "title": "Chocolate Cake",
+    "description": "A rich and decadent chocolate cake perfect for any occasion.",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 cup sugar",
+      "1/2 cup cocoa powder",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "1 cup buttermilk",
+      "1/2 cup vegetable oil",
+      "2 eggs",
+      "1 tsp vanilla extract"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C). Grease and flour a 9-inch round pan.",
+      "In a large bowl, whisk together flour, sugar, cocoa powder, baking soda, and salt.",
+      "In a separate bowl, whisk together buttermilk, oil, eggs, and vanilla.",
+      "Add wet ingredients to dry ingredients and mix until just combined. Do not overmix.",
+      "Pour batter into the prepared pan and bake for 30-35 minutes, or until a toothpick inserted into the center comes out clean.",
+      "Let cool in the pan for 10 minutes before transferring to a wire rack to cool completely."
+    ],
+    "cookingTime": 45,
+    "servings": 8,
+    "difficulty": "medium",
+    "rating": 0,
+    "createdAt": "2025-08-28T14:29:29.665Z"
+  },
+  {
+    "id": "614dc5d1-ce07-4063-81ab-905143a0f23a",
+    "title": "Chocolate Cake",
+    "description": "A rich and decadent chocolate cake perfect for any occasion.",
+    "ingredients": [
+      "2 cups all-purpose flour",
+      "1 cup sugar",
+      "1/2 cup cocoa powder",
+      "1 tsp baking soda",
+      "1/2 tsp salt",
+      "1 cup buttermilk",
+      "1/2 cup vegetable oil",
+      "2 eggs",
+      "1 tsp vanilla extract"
+    ],
+    "instructions": [
+      "Preheat oven to 350°F (175°C). Grease and flour a 9-inch round pan.",
+      "In a large bowl, whisk together flour, sugar, cocoa powder, baking soda, and salt.",
+      "In a separate bowl, whisk together buttermilk, oil, eggs, and vanilla.",
+      "Add wet ingredients to dry ingredients and mix until just combined. Do not overmix.",
+      "Pour batter into the prepared pan and bake for 30-35 minutes, or until a toothpick inserted into the center comes out clean.",
+      "Let cool in the pan for 10 minutes before transferring to a wire rack to cool completely."
+    ],
+    "cookingTime": 45,
+    "servings": 8,
+    "difficulty": "medium",
+    "rating": 0,
+    "createdAt": "2025-08-28T14:29:31.769Z"
   }
 ]
