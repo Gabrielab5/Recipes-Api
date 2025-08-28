@@ -8,7 +8,7 @@ const errorHandler = (err, req, res, next) => {
     statusCode: 500
   };
 
-  // different types of errors
+  // Handle different types of errors
   if (err.name === 'ValidationError') {
     error = {
       error: true,

@@ -1,0 +1,128 @@
+
+[
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "title": "Classic Spaghetti Carbonara",
+    "description": "A traditional Italian pasta dish with eggs, cheese, pancetta, and pepper",
+    "ingredients": [
+      "400g spaghetti",
+      "200g pancetta or guanciale",
+      "4 large eggs",
+      "100g Pecorino Romano cheese",
+      "Black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Bring a large pot of salted water to boil and cook spaghetti",
+      "Cut pancetta into small cubes and cook in a large pan until crispy",
+      "Beat eggs with grated cheese and black pepper in a bowl",
+      "Drain pasta, reserving 1 cup of pasta water",
+      "Add hot pasta to pancetta pan, remove from heat",
+      "Add egg mixture, tossing quickly to create a creamy sauce",
+      "Add pasta water if needed to achieve desired consistency",
+      "Serve immediately with extra cheese and pepper"
+    ],
+    "cookingTime": 20,
+    "servings": 4,
+    "difficulty": "medium",
+    "rating": 4.8,
+    "createdAt": "2025-01-01T10:30:00.000Z"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440001",
+    "title": "Easy Chicken Stir Fry",
+    "description": "Quick and healthy chicken stir fry with colorful vegetables",
+    "ingredients": [
+      "500g chicken breast, sliced",
+      "2 bell peppers, sliced",
+      "1 broccoli head, cut into florets",
+      "2 carrots, julienned",
+      "3 cloves garlic, minced",
+      "2 tbsp soy sauce",
+      "1 tbsp oyster sauce",
+      "1 tsp sesame oil",
+      "2 tbsp vegetable oil"
+    ],
+    "instructions": [
+      "Heat vegetable oil in a large wok or pan over high heat",
+      "Add chicken pieces and cook until golden brown, about 5 minutes",
+      "Remove chicken and set aside",
+      "Add vegetables to the same pan, stir-fry for 3-4 minutes",
+      "Add garlic and cook for 30 seconds",
+      "Return chicken to pan",
+      "Mix soy sauce, oyster sauce, and sesame oil in a small bowl",
+      "Pour sauce over chicken and vegetables, toss to combine",
+      "Serve immediately over rice"
+    ],
+    "cookingTime": 15,
+    "servings": 4,
+    "difficulty": "easy",
+    "rating": 4.5,
+    "createdAt": "2025-01-01T14:15:00.000Z"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440002",
+    "title": "Beef Wellington",
+    "description": "An elegant dish of beef tenderloin wrapped in puff pastry with mushroom duxelles",
+    "ingredients": [
+      "1kg beef tenderloin",
+      "500g puff pastry",
+      "500g mixed mushrooms",
+      "200g pâté de foie gras",
+      "8 slices prosciutto",
+      "2 egg yolks",
+      "2 tbsp Dijon mustard",
+      "Fresh thyme",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Season beef with salt and pepper, sear all sides in hot pan",
+      "Brush with Dijon mustard and let cool",
+      "Finely chop mushrooms and cook until moisture evaporates",
+      "Lay plastic wrap on work surface, arrange prosciutto slices",
+      "Spread mushroom mixture over prosciutto",
+      "Place beef on top, wrap tightly and refrigerate 30 minutes",
+      "Roll out puff pastry, unwrap beef and place on pastry",
+      "Wrap pastry around beef, brush with egg wash",
+      "Bake at 200°C for 25-30 minutes until golden",
+      "Rest for 10 minutes before slicing"
+    ],
+    "cookingTime": 90,
+    "servings": 6,
+    "difficulty": "hard",
+    "rating": 4.9,
+    "createdAt": "2025-01-01T16:45:00.000Z"
+  },
+  {
+    "id": "550e8400-e29b-41d4-a716-446655440003",
+    "title": "Chocolate Chip Cookies",
+    "description": "Classic homemade chocolate chip cookies that are crispy on the edges and chewy in the center",
+    "ingredients": [
+      "225g all-purpose flour",
+      "1 tsp baking soda",
+      "1 tsp salt",
+      "225g butter, softened",
+      "150g granulated sugar",
+      "165g brown sugar",
+      "2 large eggs",
+      "2 tsp vanilla extract",
+      "340g chocolate chips"
+    ],
+    "instructions": [
+      "Preheat oven to 190°C",
+      "Mix flour, baking soda, and salt in a bowl",
+      "Cream together butter and both sugars until fluffy",
+      "Beat in eggs one at a time, then vanilla",
+      "Gradually mix in flour mixture",
+      "Stir in chocolate chips",
+      "Drop rounded tablespoons onto ungreased baking sheets",
+      "Bake for 9-11 minutes until golden brown",
+      "Cool on baking sheet for 2 minutes, then transfer to wire rack"
+    ],
+    "cookingTime": 25,
+    "servings": 24,
+    "difficulty": "easy",
+    "rating": 4.7,
+    "createdAt": "2025-01-01T09:20:00.000Z"
+  }
+]

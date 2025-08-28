@@ -2,11 +2,17 @@
   "name": "recipes-api",
   "version": "1.0.0",
   "description": "📜 Project Description: Recipe Application 🍲 This application will be an interactive and easy-to-use platform that allows users to find, view, save, and share a wide variety of recipes. The goal is to create a pleasant and accessible experience for all cooking enthusiasts, from beginners to professionals.",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["recipes",
+    "api",
+    "express",
+    "nodejs",
+    "rest"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +20,8 @@
     "joi": "^18.0.1",
     "morgan": "^1.10.1",
     "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }

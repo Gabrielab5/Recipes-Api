@@ -31,7 +31,7 @@ async function getAllRecipes(req, res) {
       );
     }
 
-    res.status(200).json(recipes);
+    res.status(200).json(filteredRecipes);
   } catch (error) {
     res.status(500).json({ error: true, message: 'Error retrieving recipes', statusCode: 500 });
   }
@@ -83,7 +83,7 @@ async function updateRecipe(req, res) {
     try {
         const { id } = req.params;
         const recipes = await readRecipesFile();
-        const recipeIndex = recipes.findIndex(r => r,id ===id);
+        const recipeIndex = recipes.findIndex(r => r.id ===id);
 
         if(recipeIndex === -1) {
             return res.status(404).json({error: true, message: 'Recipe not found', statusCode: 404})
@@ -93,7 +93,7 @@ async function updateRecipe(req, res) {
             ...recipes[recipeIndex], 
             ...req.body, 
             id : recipes[recipeIndex].id,
-            createdAt: recipes[recipes].createdAt,
+            createdAt: recipes[recipeIndex].createdAt,
             updatedAt: new Date().toISOString()
         };
 
