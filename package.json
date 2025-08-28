@@ -1,0 +1,17 @@
+{
+  "name": "recipes-api",
+  "version": "1.0.0",
+  "description": "📜 Project Description: Recipe Application 🍲 This application will be an interactive and easy-to-use platform that allows users to find, view, save, and share a wide variety of recipes. The goal is to create a pleasant and accessible experience for all cooking enthusiasts, from beginners to professionals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "uuid": "^11.1.0"
+  }
+}
