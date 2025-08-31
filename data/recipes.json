@@ -56,8 +56,12 @@
     "cookingTime": 15,
     "servings": 4,
     "difficulty": "easy",
-    "rating": 4.5,
-    "createdAt": "2025-01-01T14:15:00.000Z"
+    "rating": 1.5,
+    "createdAt": "2025-01-01T14:15:00.000Z",
+    "ratings": [
+      1,
+      2
+    ]
   },
   {
     "id": "550e8400-e29b-41d4-a716-446655440002",
@@ -208,8 +212,11 @@
     "cookingTime": 45,
     "servings": 8,
     "difficulty": "medium",
-    "rating": 0,
-    "createdAt": "2025-08-28T14:29:31.769Z"
+    "rating": 2,
+    "createdAt": "2025-08-28T14:29:31.769Z",
+    "ratings": [
+      2
+    ]
   },
   {
     "id": "f0e8595c-ac99-4062-a0a7-110423f0d95c",

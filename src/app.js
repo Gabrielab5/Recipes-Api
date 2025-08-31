@@ -5,10 +5,14 @@ const PORT = 3000;
 const morgan = require('morgan');
 const recipesRoutes = require('./routes/recipes.routes');
 const { errorHandler, notFoundHandler } = require('./middlewares/errorHandler');
+const apiLimiter = require('./middlewares/rateLimiter');
 
 app.use(express.json());
 app.use(morgan('tiny')); // Using morgan for logging
 app.use(express.static(path.join(__dirname, '..', 'public')));
+
+// Apply rate limiting to all API routes
+app.use('/api/', apiLimiter);
 
 app.use('/api/recipes', recipesRoutes);
 
@@ -21,13 +25,16 @@ app.get('/', (req, res) => {
       'GET /api/recipes/:id': 'Get recipe by ID',
       'POST /api/recipes': 'Create new recipe',
       'PUT /api/recipes/:id': 'Update recipe',
+      'PUT /api/recipes/:id/rate': 'Rate a recipe',
       'DELETE /api/recipes/:id': 'Delete recipe',
       'GET /api/recipes/stats': 'Get recipe statistics'
     },
     queryParameters: {
       'difficulty': 'Filter by difficulty (easy, medium, hard)',
       'maxCookingTime': 'Filter by maximum cooking time in minutes',
-      'search': 'Search in recipe title and description'
+      'search': 'Search in recipe title and description',
+      'sort': 'Sort by date, rating, or cookingTime',
+      'order': 'Sort order (asc or desc)'
     }
   });
 });

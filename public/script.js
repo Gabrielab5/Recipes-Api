@@ -36,9 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
         recipes.forEach(recipe => {
             const recipeCard = document.createElement('div');
             recipeCard.className = 'bg-blue-50 rounded-lg p-6 flex flex-col justify-between';
+
+            const avgRating = recipe.ratings && recipe.ratings.length > 0 
+                ? recipe.ratings.reduce((sum, r) => sum + r, 0) / recipe.ratings.length 
+                : 0;
+
+            const starsHtml = Array.from({ length: 5 }, (_, i) => {
+                const isFilled = i < Math.floor(avgRating);
+                const isHalf = !isFilled && (i < avgRating);
+                return `<i class="fa-solid fa-star ${isFilled || isHalf ? 'filled' : 'text-gray-300'}"></i>`;
+            }).join('');
+            
             recipeCard.innerHTML = `
                 <div>
                     <h3 class="text-xl font-semibold text-gray-800">${recipe.title}</h3>
+                    <div class="flex items-center space-x-2 mt-1 mb-2">
+                        <span class="text-yellow-500 text-lg">${starsHtml}</span>
+                        <span class="text-gray-600 text-sm">(${avgRating.toFixed(1) || '0.0'})</span>
+                    </div>
                     <p class="text-sm text-gray-500 mb-2">Difficulty: <span class="capitalize">${recipe.difficulty}</span> | Time: ${recipe.cookingTime} min</p>
                     <p class="text-gray-600 mb-4">${recipe.description}</p>
                     <div class="mt-2">
@@ -53,11 +68,53 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${recipe.instructions.map(i => `<li>${i}</li>`).join('')}
                         </ul>
                     </div>
+                    <div class="flex items-center justify-between mt-4 border-t pt-4">
+                    <span class="text-gray-700 font-medium">Rate this:</span>
+                    <div class="flex space-x-1" data-recipe-id="${recipe.id}">
+                        ${Array.from({ length: 5 }, (_, i) => `
+                            <button class="star-btn text-gray-300 text-lg focus:outline-none" data-rating="${i + 1}">
+                                <i class="fa-solid fa-star hover:text-yellow-400"></i>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
                 </div>
             `;
             recipesContainer.appendChild(recipeCard);
         });
     };
+
+    // Function to handle rating a recipe
+    const handleRating = async (recipeId, rating) => {
+        try {
+            const response = await fetch(`/api/recipes/${recipeId}/rate`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rating }),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Failed to submit rating.');
+            }
+
+            // After a successful rating, refresh the recipes list to show the new average
+            fetchRecipes();
+            alert('Thank you for your rating!');
+        } catch (error) {
+            console.error('Error submitting rating:', error);
+            alert(`Error submitting rating: ${error.message}`);
+        }
+    };
+
+    recipesContainer.addEventListener('click', (e) => {
+        const starButton = e.target.closest('.star-btn');
+        if (starButton) {
+            const recipeId = starButton.parentElement.dataset.recipeId;
+            const rating = parseInt(starButton.dataset.rating, 10);
+            handleRating(recipeId, rating);
+        }
+    });
 
     // Handle search and filter button click
     searchButton.addEventListener('click', () => {

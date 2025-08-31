@@ -8,11 +8,15 @@ const recipeSchema = Joi.object({
   cookingTime: Joi.number().positive().required(),
   servings: Joi.number().integer().positive().required(),
   difficulty: Joi.string().valid('easy', 'medium', 'hard').required(),
+  ratings: Joi.array().items(Joi.number().min(1).max(5)).optional(),
+});
+
+const ratingSchema = Joi.object({
+    rating: Joi.number().min(1).max(5).required()
 });
 
 const validateRecipe = (req, res, next) => {
   const { error } = recipeSchema.validate(req.body);
-
   if (error) {
     return res.status(400).json({
       error: true,
@@ -23,6 +27,19 @@ const validateRecipe = (req, res, next) => {
   next();
 };
 
+const validateRating = (req, res, next) => {
+  const { error } = ratingSchema.validate(req.body);
+  if (error) {
+      return res.status(400).json({
+          error: true,
+          message: error.details[0].message,
+          statusCode: 400,
+    });
+  }
+  next();
+};
+
 module.exports = {
   validateRecipe,
+  validateRating,
 };
