@@ -210,5 +210,27 @@
     "difficulty": "medium",
     "rating": 0,
     "createdAt": "2025-08-28T14:29:31.769Z"
+  },
+  {
+    "id": "f0e8595c-ac99-4062-a0a7-110423f0d95c",
+    "title": "Chocolate bars",
+    "description": "Easy chocolate&peanut butter frozen  bars",
+    "ingredients": [
+      "500 gr rice puffs",
+      "200 gr dark chocolate",
+      "100 gr peanut butter"
+    ],
+    "instructions": [
+      "take all ingridients",
+      "mix them wll",
+      "put in a falt plate on a baking sheet",
+      "and put in the freezer",
+      "wait at least 30 minues to freeze"
+    ],
+    "cookingTime": 2,
+    "servings": 20,
+    "difficulty": "easy",
+    "rating": 0,
+    "createdAt": "2025-08-31T09:29:29.966Z"
   }
 ]

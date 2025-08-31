@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes App UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .card {
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8 min-h-screen flex items-center justify-center">
+
+    <div class="bg-white rounded-lg p-8 w-full max-w-4xl card">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Recipes App</h1>
+
+        <!-- Search and Filter Section -->
+        <div class="mb-6 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+            <input type="text" id="searchInput" placeholder="Search for recipes..." class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <select id="difficultyFilter" class="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">All Difficulties</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <input type="number" id="maxTimeInput" placeholder="Max time (min)" class="w-28 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button id="searchButton" class="p-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">Search</button>
+        </div>
+
+        <!-- Recipe List -->
+        <div id="recipesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        </div>
+
+        <!-- Add a simple form for creating a new recipe -->
+        <div class="mt-8 pt-8 border-t border-gray-300">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">Add a New Recipe</h2>
+            <form id="addRecipeForm" class="space-y-4">
+                <input type="text" id="recipeTitle" placeholder="Recipe Title" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <textarea id="recipeDescription" placeholder="Description" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <input type="text" id="recipeIngredients" placeholder="Ingredients (comma separated)" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" id="recipeInstructions" placeholder="Instructions (comma separated)" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="number" id="recipeCookingTime" placeholder="Cooking Time (min)" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="number" id="recipeServings" placeholder="Servings" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select id="recipeDifficulty" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="" disabled selected>Select Difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <button type="submit" class="w-full p-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition duration-300">Add Recipe</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
